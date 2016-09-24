@@ -21,7 +21,7 @@ router.post('/burgers/create', function(req,res) {
 	var dateNew = new Date();
 	var date = dateNew.getDate() + "," + (dateNew.getMonth() + 1) + "," + dateNew.getFullYear();
 	console.log(date);
-	burger.insertOne(['burgerName', 'date'], [req.body.name, date], function(data){
+	burger.insertOne(['burgerName', 'date'], [req.body.name + " burger", date], function(data){
 		res.redirect('/burgers')
 	});
 });
