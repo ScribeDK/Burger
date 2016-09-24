@@ -1,0 +1,37 @@
+body {
+	
+}
+
+input{margin: 2px;
+	margin-left: 5px;
+}
+
+label{padding-left: 5px;
+}
+
+.title{color: white;
+background-color: #36454f;
+text-align: center;
+}
+
+.sidebar{height: 100%;
+min-height: 500px;
+}
+
+.trainBox{border: #5E2D79 solid 1px;
+margin-top: 15px;
+padding: 0px;	
+}
+
+.titleBar{width: 100%px;
+background: #5E2D79;
+color: white;
+padding-top: 5px;
+padding-left: 5px;
+padding-bottom: 5px;	
+}
+
+.bold{
+	font-weight: bold;
+}
+

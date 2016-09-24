@@ -1,0 +1,45 @@
+<h1>Burger Builder</h1>
+
+<br>
+
+<h2>Uneaten Burgers</h2>
+
+<ul>
+  {{#each products}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.burgerName}}
+
+        <form action="burgers/update/{{this.itemID}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">Devour</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<br>
+
+<h2>Eaten Burgers</h2>
+
+<ul>
+  {{#each products}}
+    {{#if this.devoured}}
+      <li>
+        {{this.burgerName}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<br>
+
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="burgers/create" method="POST">
+
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+
+  <button type="submit">Add Burger</button>
+</form>
